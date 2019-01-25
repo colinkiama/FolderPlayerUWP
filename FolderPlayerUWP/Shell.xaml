@@ -22,12 +22,14 @@
                    Text="Current Folder"
                    Style="{StaticResource ViewTitleStyle}"/>
         <Pivot Grid.Row="1" 
-               Style="{StaticResource IconAccentPivotStyle}">
-            <PivotItem Header="Current Folder"
-                       Style="{StaticResource IconAccentPivotItemStyle}">
+               Style="{StaticResource IconAccentPivotStyle}"
+               Margin="4,4,0,0">
+            <PivotItem Style="{StaticResource IconAccentPivotItemStyle}"
+                       Header="&#xEA69;">
                 <Views:CurrentFolderView/>
             </PivotItem>
-            <PivotItem Header="Settings">
+            <PivotItem Header="&#xE115;">
+               
                 <Views:SettingsView/>
             </PivotItem>
         </Pivot>
@@ -35,6 +37,6 @@
         <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}"
               Height="60"
               Grid.Row="2"
-              Margin="-60,0,0,0"/>
+              Margin="-20,0,-20,0"/>
     </Grid>
 </Page>
