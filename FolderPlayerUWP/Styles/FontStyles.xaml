@@ -1,0 +1,83 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FolderPlayerUWP.Styles">
+
+    <Thickness x:Key="RegularViewMargin">20,40,0,0</Thickness>
+
+    <Style x:Key="ViewTitleStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontWeight"
+                Value="Bold"/>
+        <Setter Property="FontSize"
+                Value="36"/>
+    </Style>
+
+    <Style x:Key="FolderNameStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontWeight"
+                Value="Bold"/>
+        <Setter Property="FontSize"
+                Value="24"/>
+    </Style>
+
+    <Style x:Key="FolderSongNameStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+
+    <Style x:Key="FolderSongArtistStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12"/>
+    </Style>
+    <Style x:Key="MiniPlayerSongNameStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
+    <Style x:Key="MiniPlayerArtistStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontWeight" Value="Light"/>
+        <Setter Property="FontSize" Value="12"/>
+    </Style>
+    <Style x:Key="NowPlayingMediaTimeElapsedTextStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12"/>
+    </Style>
+    <Style x:Key="DesktopViewTitleStyle"
+           TargetType="TextBlock"
+           BasedOn="{StaticResource ViewTitleStyle}">
+        <Setter Property="FontSize" Value="60"/>
+    </Style>
+    <Style x:Key="DesktopFolderNameStyle"
+           TargetType="TextBlock"
+           BasedOn="{StaticResource FolderNameStyle}">
+        <Setter Property="FontSize" Value="40"/>
+    </Style>
+    <Style x:Key="DesktopFolderSongStyle"
+           TargetType="TextBlock"
+           BasedOn="{StaticResource FolderSongNameStyle}">
+        <Setter Property="FontSize" Value="28"/>
+    </Style>
+    <Style x:Key="DesktopSettingDescriptionStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="24"/>
+    </Style>
+    <Style x:Key="DesktopFolderSettingsCategoryStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="30"/>
+    </Style>
+
+    <Style x:Key="DesktopMiniPlayerSongTitleStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="24"/>
+    </Style>
+
+    <Style x:Key="DesktopMiniPlayerArtistStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+</ResourceDictionary>

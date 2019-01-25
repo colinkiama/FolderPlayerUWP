@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="FolderPlayerUWP.Shell"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FolderPlayerUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Views="using:FolderPlayerUWP.Views"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <Grid Margin="{StaticResource RegularViewMargin}">
+        <Grid.Resources>
+            <ResourceDictionary Source="ms-appx:///Styles/ChangedControlStyles.xaml"/>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Name="ViewNameTextBlock"
+                   Text="Current Folder"
+                   Style="{StaticResource ViewTitleStyle}"/>
+        <Pivot Grid.Row="1" 
+               Style="{StaticResource IconAccentPivotStyle}">
+            <PivotItem Header="Current Folder"
+                       Style="{StaticResource IconAccentPivotItemStyle}">
+                <Views:CurrentFolderView/>
+            </PivotItem>
+            <PivotItem Header="Settings">
+                <Views:SettingsView/>
+            </PivotItem>
+        </Pivot>
+
+        <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}"
+              Height="60"
+              Grid.Row="2"
+              Margin="-60,0,0,0"/>
+    </Grid>
+</Page>
