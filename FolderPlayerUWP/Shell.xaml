@@ -23,7 +23,7 @@
                    Style="{StaticResource ViewTitleStyle}"/>
         <Pivot Grid.Row="1" 
                Style="{StaticResource IconAccentPivotStyle}"
-               Margin="4,4,0,0">
+               Margin="4,12,0,0">
             <PivotItem Style="{StaticResource IconAccentPivotItemStyle}"
                        Header="&#xEA69;">
                 <Views:CurrentFolderView/>
