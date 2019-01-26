@@ -18,6 +18,7 @@
             </ResourceDictionary.ThemeDictionaries>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="ms-appx:///Styles/FontStyles.xaml"/>
+                <ResourceDictionary Source="ms-appx:///Styles/ChangedControlStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

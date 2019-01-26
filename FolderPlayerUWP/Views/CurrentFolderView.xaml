@@ -35,7 +35,7 @@
         <TextBlock Text="1999"
                Style="{StaticResource FolderNameStyle}"/>
         <ListView Grid.Row="1"
-                  ItemContainerStyle="{StaticResource ListViewItemExpanded}">
+                  ItemContainerStyle="{ThemeResource NoPaddingAccentSelectionListViewItemStyle}">
             <ListViewItem>
                 <controls1:MediaControl/>
             </ListViewItem>

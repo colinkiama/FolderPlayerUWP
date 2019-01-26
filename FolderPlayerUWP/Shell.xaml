@@ -8,11 +8,8 @@
     xmlns:Views="using:FolderPlayerUWP.Views"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
+
     <Grid Margin="{StaticResource RegularViewMargin}">
-        <Grid.Resources>
-            <ResourceDictionary Source="ms-appx:///Styles/ChangedControlStyles.xaml"/>
-        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
