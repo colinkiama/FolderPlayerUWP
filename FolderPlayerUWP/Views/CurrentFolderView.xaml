@@ -21,9 +21,11 @@
             BlurRadius="12"
             ShadowOpacity="0.5"
             OffsetY="2"
-            Grid.RowSpan="2">
+            Grid.RowSpan="2"
+            Canvas.ZIndex="12">
             <Button Style="{ThemeResource AccentButtonStyle}"
-            Name="ChooseFolderButton">
+            Name="ChooseFolderButton"
+                    >
                 <Button.Content>
                     <StackPanel>
                         <TextBlock Text="Choose Folder"/>
@@ -35,7 +37,8 @@
         <TextBlock Text="1999"
                Style="{StaticResource FolderNameStyle}"/>
         <ListView Grid.Row="1"
-                  ItemContainerStyle="{ThemeResource NoPaddingAccentSelectionListViewItemStyle}">
+                  ItemContainerStyle="{ThemeResource NoPaddingAccentSelectionListViewItemStyle}"
+                  Margin="0,4,20,0">
             <ListViewItem>
                 <controls1:MediaControl/>
             </ListViewItem>

@@ -9,31 +9,35 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Margin="{StaticResource RegularViewMargin}">
-        <Grid.RowDefinitions>
+    <Grid>
+
+        <Grid Name="InnerGrid"  
+            Margin="{StaticResource RegularViewMargin}">
+            <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <TextBlock Name="ViewNameTextBlock"
+            <TextBlock Name="ViewNameTextBlock"
                    Text="Current Folder"
                    Style="{StaticResource ViewTitleStyle}"/>
-        <Pivot Grid.Row="1" 
+            <Pivot Grid.Row="1" 
                Style="{StaticResource IconAccentPivotStyle}"
                Margin="4,12,0,0">
-            <PivotItem Style="{StaticResource IconAccentPivotItemStyle}"
+                <PivotItem Style="{StaticResource IconAccentPivotItemStyle}"
                        Header="&#xEA69;">
-                <Views:CurrentFolderView/>
-            </PivotItem>
-            <PivotItem Header="&#xE115;">
-               
-                <Views:SettingsView/>
-            </PivotItem>
-        </Pivot>
+                    <Views:CurrentFolderView/>
+                </PivotItem>
+                <PivotItem Header="&#xE115;">
 
-        <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}"
+                    <Views:SettingsView/>
+                </PivotItem>
+            </Pivot>
+
+            <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}"
               Height="60"
               Grid.Row="2"
               Margin="-20,0,-20,0"/>
+        </Grid>
     </Grid>
 </Page>
