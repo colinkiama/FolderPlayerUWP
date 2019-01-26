@@ -6,21 +6,24 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:controls1="using:FolderPlayerUWP.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid>
-    <TextBlock Text="1999"
-               Style="{StaticResource FolderNameStyle}"/>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <controls:DropShadowPanel
             VerticalAlignment="Bottom"
                 HorizontalAlignment="Right"
                 Margin="0,0,20,40"
             BlurRadius="12"
             ShadowOpacity="0.5"
-            OffsetY="2">
+            OffsetY="2"
+            Grid.RowSpan="2">
             <Button Style="{ThemeResource AccentButtonStyle}"
-            >
+            Name="ChooseFolderButton">
                 <Button.Content>
                     <StackPanel>
                         <TextBlock Text="Choose Folder"/>
@@ -28,5 +31,27 @@
                 </Button.Content>
             </Button>
         </controls:DropShadowPanel>
+
+        <TextBlock Text="1999"
+               Style="{StaticResource FolderNameStyle}"/>
+        <ListView Grid.Row="1"
+                  >
+            <ListViewItem>
+                <controls1:MediaControl/>
+            </ListViewItem>
+            <ListViewItem>
+                <controls1:MediaControl/>
+            </ListViewItem>
+            <ListViewItem>
+                <controls1:MediaControl/>
+            </ListViewItem>
+            <ListViewItem>
+                <controls1:MediaControl/>
+            </ListViewItem>
+            <ListViewItem>
+                <controls1:MediaControl/>
+            </ListViewItem>
+        </ListView>
+
     </Grid>
 </Page>
