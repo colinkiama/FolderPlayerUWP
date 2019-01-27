@@ -23,6 +23,8 @@
                     <VisualState.Setters>
                         <Setter Target="PageTitle.Style"
                                 Value="{StaticResource FolderNameStyle}"/>
+                        <Setter Target="MediaListView.Margin"
+                                Value="0,20,20,0"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Desktop">
@@ -32,6 +34,8 @@
                     <VisualState.Setters>
                         <Setter Target="PageTitle.Style"
                                 Value="{StaticResource DesktopFolderNameStyle}"/>
+                        <Setter Target="MediaListView.Margin"
+                                Value="0,40,20,0"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -61,7 +65,7 @@
                    x:Name="PageTitle"/>
         <ListView Grid.Row="1"
                   ItemContainerStyle="{ThemeResource NoPaddingAccentSelectionListViewItemStyle}"
-                  Margin="0,12,20,0">
+                  x:Name="MediaListView">
             <ListViewItem>
                 <controls1:MediaControl/>
             </ListViewItem>

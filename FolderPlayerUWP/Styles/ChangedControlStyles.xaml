@@ -335,11 +335,11 @@
     <!-- Default style for Windows.UI.Xaml.Controls.PivotItem -->
     <Style x:Key="IconAccentPivotItemStyle" TargetType="PivotItem">
         <Setter Property="Background" Value="{ThemeResource PivotItemBackground}" />
-        <Setter Property="Margin" Value="0  " />
         <Setter Property="Padding" Value="0" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="VerticalContentAlignment" Value="Stretch" />
         <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Margin" Value="0"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="PivotItem">
@@ -350,8 +350,29 @@
                                 <VisualState x:Name="Left" />
                                 <VisualState x:Name="Center" />
                             </VisualStateGroup>
+                            <VisualStateGroup x:Name="WindowSizes">
+                                <VisualState x:Name="Mobile">
+                                    <VisualState.StateTriggers>
+                                        <AdaptiveTrigger MinWindowWidth="0"/>
+                                    </VisualState.StateTriggers>
+                                    <VisualState.Setters>
+                                        <Setter Target="ContentPresenter.Margin"
+                                                Value="0,0,0,0"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Desktop">
+                                    <VisualState.StateTriggers>
+                                        <AdaptiveTrigger MinWindowWidth="800"/>
+                                    </VisualState.StateTriggers>
+                                    <VisualState.Setters>
+                                        <Setter Target="ContentPresenter.Margin"
+                                                Value="0,24,0,0"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        <ContentPresenter x:Name="ContentPresenter"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             ContentTemplate="{TemplateBinding ContentTemplate}"
                             Content="{TemplateBinding Content}"
@@ -489,7 +510,7 @@
                                     </VisualState.StateTriggers>
                                     <VisualState.Setters>
                                         <Setter Target="ContentPresenter.FontSize"
-                                                Value="24"/>
+                                                Value="28"/>
                                     </VisualState.Setters>
                                 </VisualState>
                                 <VisualState x:Name="Desktop">
@@ -498,9 +519,9 @@
                                     </VisualState.StateTriggers>
                                     <VisualState.Setters>
                                         <Setter Target="ContentPresenter.FontSize"
-                                                Value="32"/>
+                                                Value="48"/>
                                         <Setter Target="ContentPresenter.Margin"
-                                                Value="0,0,8,0"/>
+                                                Value="0,0,20,0"/>
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>
@@ -538,7 +559,7 @@
         <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}" />
         <Setter Property="TabNavigation" Value="Local" />
         <Setter Property="IsHoldingEnabled" Value="True" />
-        <Setter Property="Padding" Value="0,0,12,0" />
+        <Setter Property="Padding" Value="0,0,0,0" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="VerticalContentAlignment" Value="Top" />
         <Setter Property="MinWidth" Value="0" />
@@ -967,6 +988,7 @@
     </Style>
     <!--#endregion-->
 
+    <!--#region Button Styles-->
     <Style TargetType="Button" 
            x:Key="MiniPlayerButtonStyle"
            BasedOn="{StaticResource TextBlockButtonStyle}">
@@ -987,4 +1009,5 @@
         <Setter Property="FontSize"
                 Value="12"/>
     </Style>
+    <!--#endregion-->
 </ResourceDictionary>
