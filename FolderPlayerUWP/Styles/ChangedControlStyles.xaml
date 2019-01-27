@@ -366,7 +366,7 @@
                                     </VisualState.StateTriggers>
                                     <VisualState.Setters>
                                         <Setter Target="ContentPresenter.Margin"
-                                                Value="0,24,0,0"/>
+                                                Value="0,24,60,0"/>
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>
