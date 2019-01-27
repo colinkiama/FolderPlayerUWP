@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Views="using:FolderPlayerUWP.Views"
+    xmlns:controls="using:FolderPlayerUWP.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -55,10 +56,10 @@
                 </PivotItem>
             </Pivot>
 
-            <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}"
-              Height="60"
+            <controls:MiniPlayerControl Background="{ThemeResource SystemControlBackgroundAccentBrush}"
               Grid.Row="2"
-              Margin="-20,0,-20,0"/>
+              Margin="-20,0,0,0"
+              x:Name="MiniPlayer"/>
         </Grid>
     </Grid>
 </Page>
