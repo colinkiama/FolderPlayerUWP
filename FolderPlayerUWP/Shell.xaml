@@ -59,7 +59,8 @@
             <controls:MiniPlayerControl Background="{ThemeResource SystemControlBackgroundAccentBrush}"
               Grid.Row="2"
               Margin="-20,0,0,0"
-              x:Name="MiniPlayer"/>
+              x:Name="MiniPlayer"
+              Height="60"/>
         </Grid>
     </Grid>
 </Page>

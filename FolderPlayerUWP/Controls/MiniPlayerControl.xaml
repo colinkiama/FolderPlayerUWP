@@ -22,12 +22,7 @@
                         <AdaptiveTrigger MinWindowWidth="0"/>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="MediaTitleTextBlock.Style"
-                                Value="{StaticResource MiniPlayerSongNameStyle}"/>
-                        <Setter Target="MediaArtistTextBlock.Style"
-                                Value="{StaticResource MiniPlayerArtistStyle}"/>
-                        <Setter Target="Container.Height"
-                                Value="60"/>
+                        
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Desktop">
@@ -35,24 +30,13 @@
                         <AdaptiveTrigger MinWindowWidth="800"/>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="MediaTitleTextBlock.Style"
-                                Value="{StaticResource DesktopMiniPlayerSongTitleStyle}"/>
-                        <Setter Target="MediaArtistTextBlock.Style"
-                                Value="{StaticResource DesktopMiniPlayerArtistStyle}"/>
-                        <Setter Target="Container.Height"
-                                Value="80"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         <RelativePanel Background="{ThemeResource SystemControlBackgroundAccentBrush}"
                        x:Name="Container">
-            <RelativePanel.Resources>
-                <Style TargetType="TextBlock">
-                    <Setter Property="TextTrimming"
-                    Value="CharacterEllipsis"/>
-                </Style>
-            </RelativePanel.Resources>
+            
             <MediaPlayerElement x:Name="MiniPlayer"
                                 Width="44"
                                 Height="44"
@@ -61,8 +45,12 @@
                         RelativePanel.AlignVerticalCenterWith="MiniPlayer"
                         RelativePanel.RightOf="MiniPlayer"
                         RelativePanel.LeftOf="MediaControlsStackPanel">
-                <TextBlock Text="Summer Knights" x:Name="MediaTitleTextBlock"/>
-                <TextBlock Text="Joey Bada$$" x:Name="MediaArtistTextBlock"/>
+                <TextBlock Text="Summer Knights" 
+                           x:Name="MediaTitleTextBlock"
+                           Style="{StaticResource MiniPlayerSongNameStyle}"/>
+                <TextBlock Text="Joey Bada$$" 
+                           x:Name="MediaArtistTextBlock"
+                           Style="{StaticResource MiniPlayerArtistStyle}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal"
                         x:Name="MediaControlsStackPanel"

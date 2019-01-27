@@ -34,11 +34,14 @@
     <Style x:Key="MiniPlayerSongNameStyle"
            TargetType="TextBlock">
         <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
     </Style>
     <Style x:Key="MiniPlayerArtistStyle"
            TargetType="TextBlock">
-        <Setter Property="FontWeight" Value="Light"/>
         <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
     </Style>
     <Style x:Key="NowPlayingMediaTimeElapsedTextStyle"
            TargetType="TextBlock">
@@ -70,14 +73,5 @@
         <Setter Property="FontSize" Value="30"/>
     </Style>
 
-    <Style x:Key="DesktopMiniPlayerSongTitleStyle"
-           TargetType="TextBlock">
-        <Setter Property="FontWeight" Value="SemiBold"/>
-        <Setter Property="FontSize" Value="24"/>
-    </Style>
-
-    <Style x:Key="DesktopMiniPlayerArtistStyle"
-           TargetType="TextBlock">
-        <Setter Property="FontSize" Value="20"/>
-    </Style>
+    
 </ResourceDictionary>
