@@ -52,12 +52,12 @@
     <Style x:Key="DesktopFolderNameStyle"
            TargetType="TextBlock"
            BasedOn="{StaticResource FolderNameStyle}">
-        <Setter Property="FontSize" Value="40"/>
+        <Setter Property="FontSize" Value="32"/>
     </Style>
     <Style x:Key="DesktopFolderSongStyle"
            TargetType="TextBlock"
            BasedOn="{StaticResource FolderSongNameStyle}">
-        <Setter Property="FontSize" Value="28"/>
+        <Setter Property="FontSize" Value="20"/>
     </Style>
     <Style x:Key="DesktopSettingDescriptionStyle"
            TargetType="TextBlock">

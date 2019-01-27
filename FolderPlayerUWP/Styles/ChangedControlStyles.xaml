@@ -366,7 +366,7 @@
     <Style TargetType="PivotHeaderItem">
         <Setter Property="FontSize" Value="{ThemeResource PivotHeaderItemFontSize}" />
         <Setter Property="FontFamily" Value="{ThemeResource PivotHeaderItemFontFamily}" />
-        <Setter Property="FontWeight" Value="{ThemeResource PivotHeaderItemThemeFontWeight}" />
+        <Setter Property="FontWeight" Value="Normal" />
         <Setter Property="CharacterSpacing" Value="{ThemeResource PivotHeaderItemCharacterSpacing}" />
         <Setter Property="Background" Value="{ThemeResource PivotHeaderItemBackgroundUnselected}" />
         <Setter Property="Foreground" Value="{ThemeResource PivotHeaderItemForegroundUnselected}" />
@@ -494,11 +494,13 @@
                                 </VisualState>
                                 <VisualState x:Name="Desktop">
                                     <VisualState.StateTriggers>
-                                        <AdaptiveTrigger MinWindowWidth="700"/>
+                                        <AdaptiveTrigger MinWindowWidth="800"/>
                                     </VisualState.StateTriggers>
                                     <VisualState.Setters>
                                         <Setter Target="ContentPresenter.FontSize"
-                                                Value="48"/>
+                                                Value="32"/>
+                                        <Setter Target="ContentPresenter.Margin"
+                                                Value="0,0,8,0"/>
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>
@@ -536,8 +538,8 @@
         <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}" />
         <Setter Property="TabNavigation" Value="Local" />
         <Setter Property="IsHoldingEnabled" Value="True" />
-        <Setter Property="Padding" Value="0,0,0,0" />
-        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="Padding" Value="0,0,12,0" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="VerticalContentAlignment" Value="Top" />
         <Setter Property="MinWidth" Value="0" />
         <Setter Property="MinHeight" Value="0" />
@@ -548,7 +550,6 @@
         <Setter Property="FocusVisualPrimaryThickness" Value="2" />
         <Setter Property="FocusVisualSecondaryBrush" Value="{ThemeResource SystemControlFocusVisualSecondaryBrush}" />
         <Setter Property="FocusVisualSecondaryThickness" Value="1" />
-        <Setter Property="Margin" Value="0,0,0,12"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListViewItem">
@@ -862,6 +863,26 @@
                                 <VisualStateGroup.Transitions>
                                     <VisualTransition To="NotDragging" GeneratedDuration="0:0:0.2" />
                                 </VisualStateGroup.Transitions>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="WindowSizes">
+                                <VisualState x:Name="Phone">
+                                    <VisualState.StateTriggers>
+                                        <AdaptiveTrigger MinWindowWidth="0"/>
+                                    </VisualState.StateTriggers>
+                                    <VisualState.Setters>
+                                        <Setter Target="ContentBorder.Margin"
+                                                Value="0,0,0,12"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Desktop">
+                                    <VisualState.StateTriggers>
+                                        <AdaptiveTrigger MinWindowWidth="800"/>
+                                    </VisualState.StateTriggers>
+                                    <VisualState.Setters>
+                                        <Setter Target="ContentBorder.Margin"
+                                                Value="0,0,0,16"/>
+                                    </VisualState.Setters>  
+                                </VisualState>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                         <Rectangle x:Name="BorderBackground"

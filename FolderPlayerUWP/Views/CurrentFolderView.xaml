@@ -14,6 +14,28 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowSizes">
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="PageTitle.Style"
+                                Value="{StaticResource FolderNameStyle}"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="PageTitle.Style"
+                                Value="{StaticResource DesktopFolderNameStyle}"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <controls:DropShadowPanel
             VerticalAlignment="Bottom"
                 HorizontalAlignment="Right"
@@ -35,10 +57,11 @@
         </controls:DropShadowPanel>
 
         <TextBlock Text="1999"
-               Style="{StaticResource FolderNameStyle}"/>
+               Style="{StaticResource FolderNameStyle}"
+                   x:Name="PageTitle"/>
         <ListView Grid.Row="1"
                   ItemContainerStyle="{ThemeResource NoPaddingAccentSelectionListViewItemStyle}"
-                  Margin="0,4,20,0">
+                  Margin="0,12,20,0">
             <ListViewItem>
                 <controls1:MediaControl/>
             </ListViewItem>

@@ -10,7 +10,28 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowSizes">
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ViewNameTextBlock.Style"
+                                Value="{StaticResource ViewTitleStyle}"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ViewNameTextBlock.Style"
+                                Value="{StaticResource DesktopViewTitleStyle}"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <Grid Name="InnerGrid"  
             Margin="{StaticResource RegularViewMargin}">
             <Grid.RowDefinitions>
