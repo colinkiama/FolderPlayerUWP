@@ -24,7 +24,7 @@
                         <Setter Target="PageTitle.Style"
                                 Value="{StaticResource FolderNameStyle}"/>
                         <Setter Target="MediaListView.Margin"
-                                Value="0,20,20,0"/>
+                                Value="0,20,0,0"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Desktop">
@@ -35,7 +35,7 @@
                         <Setter Target="PageTitle.Style"
                                 Value="{StaticResource DesktopFolderNameStyle}"/>
                         <Setter Target="MediaListView.Margin"
-                                Value="0,40,20,0"/>
+                                Value="0,28,0,0"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -43,7 +43,7 @@
         <controls:DropShadowPanel
             VerticalAlignment="Bottom"
                 HorizontalAlignment="Right"
-                Margin="0,0,20,40"
+                Margin="0,0,0,40"
             BlurRadius="12"
             ShadowOpacity="0.5"
             OffsetY="2"

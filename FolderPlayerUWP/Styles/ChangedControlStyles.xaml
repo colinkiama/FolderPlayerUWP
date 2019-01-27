@@ -356,8 +356,8 @@
                                         <AdaptiveTrigger MinWindowWidth="0"/>
                                     </VisualState.StateTriggers>
                                     <VisualState.Setters>
-                                        <Setter Target="ContentPresenter.Margin"
-                                                Value="0,0,0,0"/>
+                                        <Setter Target="ContentPresenter.Padding"
+                                                Value="0,0,20,0"/>
                                     </VisualState.Setters>
                                 </VisualState>
                                 <VisualState x:Name="Desktop">
@@ -365,7 +365,7 @@
                                         <AdaptiveTrigger MinWindowWidth="800"/>
                                     </VisualState.StateTriggers>
                                     <VisualState.Setters>
-                                        <Setter Target="ContentPresenter.Margin"
+                                        <Setter Target="ContentPresenter.Padding"
                                                 Value="0,24,60,0"/>
                                     </VisualState.Setters>
                                 </VisualState>
