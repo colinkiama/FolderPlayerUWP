@@ -36,7 +36,6 @@
         </VisualStateManager.VisualStateGroups>
         <RelativePanel Background="{ThemeResource SystemControlBackgroundAccentBrush}"
                        x:Name="Container">
-            
             <MediaPlayerElement x:Name="MiniPlayer"
                                 Width="44"
                                 Height="44"
@@ -58,13 +57,17 @@
                         RelativePanel.AlignVerticalCenterWith="MiniPlayer"
                         >
                 <Button x:Name="PreviousButton"
-                        Content="Prev"/>
+                        Content="&#xE892;"
+                        Style="{StaticResource MiniPlayerButtonStyle}"/>
                 <Button x:Name="PlayButton"
-                        Content="Play"/>
+                        Content="&#xE102;"
+                        Style="{StaticResource MiniPlayerButtonStyle}"/>
                 <Button x:Name="Forward"
-                        Content="Forw"/>
+                        Content="&#xE893;"
+                        Style="{StaticResource MiniPlayerButtonStyle}"/>
                 <Button x:Name="ExpandButton"
-                        Content="Exp"
+                       Style="{StaticResource MiniPlayerExpandButtonStyle}"
+                        Content="&#xE70E;"
                         Margin="12,0,0,0"/>
             </StackPanel>
             

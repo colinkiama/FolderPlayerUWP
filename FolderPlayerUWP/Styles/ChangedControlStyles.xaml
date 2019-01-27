@@ -966,5 +966,25 @@
         </Setter>
     </Style>
     <!--#endregion-->
-    
+
+    <Style TargetType="Button" 
+           x:Key="MiniPlayerButtonStyle"
+           BasedOn="{StaticResource TextBlockButtonStyle}">
+        <Setter Property="Foreground"
+                Value="White"/>
+        <Setter Property="FontFamily"
+                Value="Segoe MDL2 Assets"/>
+        <Setter Property="FontSize"
+                Value="20"/>
+    </Style>
+    <Style TargetType="Button" 
+           x:Key="MiniPlayerExpandButtonStyle"
+           BasedOn="{StaticResource TextBlockButtonStyle}">
+        <Setter Property="Foreground"
+                Value="White"/>
+        <Setter Property="FontFamily"
+                Value="Segoe MDL2 Assets"/>
+        <Setter Property="FontSize"
+                Value="12"/>
+    </Style>
 </ResourceDictionary>
