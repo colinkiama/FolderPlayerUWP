@@ -59,7 +59,7 @@
             <FontIcon x:Name="AppIcon"
                       Grid.Column="1"
                       HorizontalAlignment="Right"
-                      Glyph="&#xF5B0;"
+                      Glyph="&#xE102;"
                       FontFamily="Segoe MDL2 Assets"/>
         </Grid>
 
@@ -79,7 +79,7 @@
             <FontIcon x:Name="DesktopMediaStatusIcon"
                       Grid.Column="2"
                       HorizontalAlignment="Right"
-                      Glyph="&#xF5B0;"
+                      Glyph="&#xE102;"
                       FontFamily="Segoe MDL2 Assets"/>
         </Grid>
     </Grid>
