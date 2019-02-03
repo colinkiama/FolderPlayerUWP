@@ -22,7 +22,8 @@
                         <AdaptiveTrigger MinWindowWidth="0"/>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        
+                        <Setter Target="MediaSlider.Visibility"
+                                Value="Collapsed"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Desktop">
@@ -30,6 +31,8 @@
                         <AdaptiveTrigger MinWindowWidth="800"/>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="MediaSlider.Visibility"
+                                Value="Visible"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
