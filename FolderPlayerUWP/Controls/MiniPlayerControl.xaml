@@ -72,12 +72,13 @@
                        Text="0:00"
                        RelativePanel.AlignLeftWith="MediaSlider"
                        RelativePanel.Below="MediaSlider"
-                           FontSize="12"/>
+                       FontSize="12"
+                       Style="{StaticResource MediaSliderTimeTextBlockStyle}"/>
                 <TextBlock Name="EndTimeTextBlock"
                        Text="4:20"
                        RelativePanel.AlignRightWith="MediaSlider"
                        RelativePanel.Below="MediaSlider"
-                           FontSize="12"/>
+                       Style="{StaticResource MediaSliderTimeTextBlockStyle}"/>
             </RelativePanel>
             <StackPanel Orientation="Horizontal"
                         x:Name="MediaControlsStackPanel"

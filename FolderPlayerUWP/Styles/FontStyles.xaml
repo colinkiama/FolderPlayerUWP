@@ -91,5 +91,12 @@
            TargetType="FontIcon">
         <Setter Property="FontSize" Value="32"/>
     </Style>
-    
+
+    <Style x:Key="MediaSliderTimeTextBlockStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontSize"
+                Value="12"/>
+        <Setter Property="Foreground"
+                Value="White"/>
+    </Style>
 </ResourceDictionary>

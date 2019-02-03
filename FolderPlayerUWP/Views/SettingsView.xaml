@@ -26,7 +26,7 @@
             </ListViewItem>
             <ListViewItem>
                 <controls:SettingsMenuItem ItemName="Rate App"
-                                           ItemDescription="We would appreciate it if you could give us 5 stars!"
+                                           ItemDescription="We would really appreciate it if you could give us 5 stars! 😊"
                                            Glyph="&#xE734;"/>
             </ListViewItem>
         </ListView>
