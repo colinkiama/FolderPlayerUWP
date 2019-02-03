@@ -5,9 +5,7 @@
     xmlns:local="using:FolderPlayerUWP.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="400">
+    mc:Ignorable="d">
 
     <Grid>
         <VisualStateManager.VisualStateGroups>
@@ -21,6 +19,8 @@
                                 Value="{StaticResource FolderSongNameStyle}"/>
                         <Setter Target="ItemDescriptionTextBlock.Style"
                                 Value="{StaticResource SettingsDescriptionStyle}"/>
+                        <Setter Target="ItemFontIcon.Style"
+                                Value="{StaticResource SettingsIconStyle}"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Desktop">
@@ -29,9 +29,11 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="ItemNameTextBlock.Style"
-                                Value="{StaticResource DesktopFolderSettingsCategoryStyle}"/>
+                                Value="{StaticResource DesktopSettingsCategoryStyle}"/>
                         <Setter Target="ItemDescriptionTextBlock.Style"
                                 Value="{StaticResource DesktopSettingDescriptionStyle}"/>
+                        <Setter Target="ItemFontIcon.Style"
+                                Value="{StaticResource DesktopSettingsIconStyle}"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -42,15 +44,14 @@
         </Grid.ColumnDefinitions>
         <FontIcon FontFamily="Segoe MDL2 Assets"
                   x:Name="ItemFontIcon"
-                  Glyph="&#xE790;"
-                  Margin="0,0,32,0"
-                  HorizontalAlignment="Left"
-                  FontSize="24"/>
+                  Glyph="{x:Bind Glyph}"
+                  Margin="0,0,32,0"/>
         <StackPanel Grid.Column="1">
-            <TextBlock Text="Personalisation"
+            <TextBlock Text="{x:Bind ItemName}"
                        Name="ItemNameTextBlock"/>
-            <TextBlock Text="Font Size, Media Button Visibility"
+            <TextBlock Text="{x:Bind ItemDescription}"
                        Name="ItemDescriptionTextBlock"
+                       TextWrapping="WrapWholeWords"
 />
         </StackPanel>
     </Grid>

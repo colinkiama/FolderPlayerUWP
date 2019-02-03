@@ -11,19 +11,25 @@
 
     <Grid>
         <ListView 
-                  HorizontalContentAlignment="Stretch"
-                  VerticalContentAlignment="Stretch"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
                   SelectionMode="None"
                   IsItemClickEnabled="True"
-                  ItemContainerStyle="{ThemeResource NoPaddingAccentSelectionListViewItemStyle}">
+                  ItemContainerStyle="{StaticResource NoPaddingAccentSelectionListViewItemStyle}">
             <ListViewItem>
-                <controls:SettingsMenuItem/>
+                <controls:SettingsMenuItem ItemName="Personalisation"
+                                           ItemDescription="Media Controls Visibility"
+                                           Glyph="&#xE790;"/>
             </ListViewItem>
             <ListViewItem>
-                <controls:SettingsMenuItem/>
+                <controls:SettingsMenuItem ItemName="About"
+                                           ItemDescription="Privacy Policy, Credits"
+                                           Glyph="&#xE897;"/>
             </ListViewItem>
             <ListViewItem>
-                <controls:SettingsMenuItem/>
+                <controls:SettingsMenuItem ItemName="Rate App"
+                                           ItemDescription="We would appreciate it if you could give us 5 stars!"
+                                           Glyph="&#xE734;"/>
             </ListViewItem>
         </ListView>
     </Grid>

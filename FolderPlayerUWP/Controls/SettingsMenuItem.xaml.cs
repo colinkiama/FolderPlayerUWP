@@ -19,6 +19,48 @@ namespace FolderPlayerUWP.Controls
 {
     public sealed partial class SettingsMenuItem : UserControl
     {
+
+
+        #region Dependency Properties
+        public string Glyph
+        {
+            get { return (string)GetValue(GlyphProperty); }
+            set { SetValue(GlyphProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Glyph.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty GlyphProperty =
+            DependencyProperty.Register("Glyph", typeof(string), typeof(SettingsMenuItem), new PropertyMetadata(""));
+
+
+        public string ItemName
+        {
+            get { return (string)GetValue(ItemNameProperty); }
+            set { SetValue(ItemNameProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for ItemName.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ItemNameProperty =
+            DependencyProperty.Register("ItemName", typeof(string), typeof(SettingsMenuItem), new PropertyMetadata(""));
+
+
+
+        public string ItemDescription
+        {
+            get { return (string)GetValue(ItemDescriptionProperty); }
+            set { SetValue(ItemDescriptionProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for ItemDescription.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ItemDescriptionProperty =
+            DependencyProperty.Register("ItemDescription", typeof(string), typeof(SettingsMenuItem), new PropertyMetadata(""));
+
+
+
+        #endregion
+
+
+
         public SettingsMenuItem()
         {
             this.InitializeComponent();

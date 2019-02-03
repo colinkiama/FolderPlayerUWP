@@ -34,6 +34,11 @@
         <Setter Property="FontSize" Value="12"/>
     </Style>
 
+    <Style x:Key="SettingsIconStyle"
+           TargetType="FontIcon">
+        <Setter Property="FontSize" Value="24"/>
+    </Style>
+    
     <Style x:Key="SettingsDescriptionStyle"
            TargetType="TextBlock"
            BasedOn="{StaticResource FolderSongArtistStyle}">
@@ -73,14 +78,18 @@
     <Style x:Key="DesktopSettingDescriptionStyle"
            TargetType="TextBlock">
         <Setter Property="FontWeight" Value="SemiBold"/>
-        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontSize" Value="20"/>
         <Setter Property="Foreground" Value="#767676"/>
     </Style>
-    <Style x:Key="DesktopFolderSettingsCategoryStyle"
+    <Style x:Key="DesktopSettingsCategoryStyle"
            TargetType="TextBlock">
         <Setter Property="FontWeight" Value="SemiBold"/>
-        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontSize" Value="24"/>
     </Style>
 
+    <Style x:Key="DesktopSettingsIconStyle"
+           TargetType="FontIcon">
+        <Setter Property="FontSize" Value="32"/>
+    </Style>
     
 </ResourceDictionary>
