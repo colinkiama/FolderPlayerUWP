@@ -42,8 +42,7 @@
                                 RelativePanel.AlignVerticalCenterWithPanel="True"/>
             <StackPanel x:Name="SongInfoStackPanel"
                         RelativePanel.AlignVerticalCenterWith="MiniPlayer"
-                        RelativePanel.RightOf="MiniPlayer"
-                        RelativePanel.LeftOf="MediaControlsStackPanel">
+                        RelativePanel.RightOf="MiniPlayer">
                 <TextBlock Text="Summer Knights" 
                            x:Name="MediaTitleTextBlock"
                            Style="{StaticResource MiniPlayerSongNameStyle}"/>
@@ -51,6 +50,13 @@
                            x:Name="MediaArtistTextBlock"
                            Style="{StaticResource MiniPlayerArtistStyle}"/>
             </StackPanel>
+            <Slider Name="MediaSlider"
+                    RelativePanel.RightOf="SongInfoStackPanel"
+                    RelativePanel.LeftOf="MediaControlsStackPanel"
+                    Minimum="0"
+                    Maximum="100"
+                    RelativePanel.AlignVerticalCenterWith="SongInfoStackPanel"
+                    Margin="60,0"/>
             <StackPanel Orientation="Horizontal"
                         x:Name="MediaControlsStackPanel"
                         RelativePanel.AlignRightWithPanel="True"
