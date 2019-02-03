@@ -11,16 +11,14 @@
 
     <Grid>
         <ListView 
-            HorizontalAlignment="Stretch"
-            VerticalAlignment="Stretch"
                   SelectionMode="None"
                   IsItemClickEnabled="True"
                   ItemContainerStyle="{StaticResource NoPaddingAccentSelectionListViewItemStyle}">
-            <ListViewItem>
+            <!--Coming Soon!!! <ListViewItem>
                 <controls:SettingsMenuItem ItemName="Personalisation"
-                                           ItemDescription="Media Controls Visibility"
+                                           ItemDescription="Coming Soon"
                                            Glyph="&#xE790;"/>
-            </ListViewItem>
+            </ListViewItem>-->
             <ListViewItem>
                 <controls:SettingsMenuItem ItemName="About"
                                            ItemDescription="Privacy Policy, Credits"

@@ -57,7 +57,8 @@
                        Header="&#xEA69;">
                     <Views:CurrentFolderView/>
                 </PivotItem>
-                <PivotItem Header="&#xE115;">
+                <PivotItem Style="{StaticResource IconAccentPivotItemStyle}"
+                    Header="&#xE115;">
                     <Views:SettingsView/>
                 </PivotItem>
             </Pivot>
