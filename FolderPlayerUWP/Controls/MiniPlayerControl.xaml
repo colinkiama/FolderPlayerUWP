@@ -59,7 +59,9 @@
                     Minimum="0"
                     Maximum="100"
                     RelativePanel.AlignVerticalCenterWith="SongInfoStackPanel"
-                    Margin="60,0"/>
+                    Margin="60,0"
+                    Style="{StaticResource FolderPlayerMediaSliderStyle}"
+                    StepFrequency="1"/>
             <StackPanel Orientation="Horizontal"
                         x:Name="MediaControlsStackPanel"
                         RelativePanel.AlignRightWithPanel="True"
