@@ -22,7 +22,7 @@
                         <AdaptiveTrigger MinWindowWidth="0"/>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="MediaSlider.Visibility"
+                        <Setter Target="MediaPlayerRelativePanel.Visibility"
                                 Value="Collapsed"/>
                     </VisualState.Setters>
                 </VisualState>
@@ -31,7 +31,7 @@
                         <AdaptiveTrigger MinWindowWidth="800"/>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="MediaSlider.Visibility"
+                        <Setter Target="MediaPlayerRelativePanel.Visibility"
                                 Value="Visible"/>
                     </VisualState.Setters>
                 </VisualState>
@@ -66,7 +66,8 @@
                     Height="30"
                         RelativePanel.AlignLeftWithPanel="True"
                         RelativePanel.AlignRightWithPanel="True"
-                        Margin="0,-4,0,0"/>
+                        Margin="0,-4,0,0"
+                        IsThumbToolTipEnabled="False"/>
                 <TextBlock Name="CurrentTimeTextBlock"
                        Text="0:00"
                        RelativePanel.AlignLeftWith="MediaSlider"

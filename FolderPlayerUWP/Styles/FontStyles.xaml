@@ -33,6 +33,12 @@
            TargetType="TextBlock">
         <Setter Property="FontSize" Value="12"/>
     </Style>
+
+    <Style x:Key="SettingsDescriptionStyle"
+           TargetType="TextBlock"
+           BasedOn="{StaticResource FolderSongArtistStyle}">
+        <Setter Property="Foreground" Value="#767676"/>
+    </Style>
     <Style x:Key="MiniPlayerSongNameStyle"
            TargetType="TextBlock">
         <Setter Property="FontWeight" Value="SemiBold"/>
@@ -68,6 +74,7 @@
            TargetType="TextBlock">
         <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="FontSize" Value="24"/>
+        <Setter Property="Foreground" Value="#767676"/>
     </Style>
     <Style x:Key="DesktopFolderSettingsCategoryStyle"
            TargetType="TextBlock">

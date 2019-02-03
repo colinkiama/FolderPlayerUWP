@@ -58,7 +58,6 @@
                     <Views:CurrentFolderView/>
                 </PivotItem>
                 <PivotItem Header="&#xE115;">
-
                     <Views:SettingsView/>
                 </PivotItem>
             </Pivot>

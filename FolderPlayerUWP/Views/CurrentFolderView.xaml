@@ -65,7 +65,9 @@
                    x:Name="PageTitle"/>
         <ListView Grid.Row="1"
                   ItemContainerStyle="{ThemeResource NoPaddingAccentSelectionListViewItemStyle}"
-                  x:Name="MediaListView">
+                  x:Name="MediaListView"
+                  SelectionMode="Single"
+                  IsItemClickEnabled="True">
             <ListViewItem>
                 <controls1:MediaControl/>
             </ListViewItem>
