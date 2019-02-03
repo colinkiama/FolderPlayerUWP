@@ -53,15 +53,31 @@
                            x:Name="MediaArtistTextBlock"
                            Style="{StaticResource MiniPlayerArtistStyle}"/>
             </StackPanel>
-            <Slider Name="MediaSlider"
-                    RelativePanel.RightOf="SongInfoStackPanel"
-                    RelativePanel.LeftOf="MediaControlsStackPanel"
+            <RelativePanel x:Name="MediaPlayerRelativePanel"
+                           RelativePanel.RightOf="SongInfoStackPanel"
+                           RelativePanel.LeftOf="MediaControlsStackPanel"
+                           RelativePanel.AlignVerticalCenterWithPanel="True"
+                           Padding="60,0">
+                <Slider Name="MediaSlider"
                     Minimum="0"
                     Maximum="100"
-                    RelativePanel.AlignVerticalCenterWith="SongInfoStackPanel"
-                    Margin="60,0"
                     Style="{StaticResource FolderPlayerMediaSliderStyle}"
-                    StepFrequency="1"/>
+                    StepFrequency="1"
+                    Height="30"
+                        RelativePanel.AlignLeftWithPanel="True"
+                        RelativePanel.AlignRightWithPanel="True"
+                        Margin="0,-4,0,0"/>
+                <TextBlock Name="CurrentTimeTextBlock"
+                       Text="0:00"
+                       RelativePanel.AlignLeftWith="MediaSlider"
+                       RelativePanel.Below="MediaSlider"
+                           FontSize="12"/>
+                <TextBlock Name="EndTimeTextBlock"
+                       Text="4:20"
+                       RelativePanel.AlignRightWith="MediaSlider"
+                       RelativePanel.Below="MediaSlider"
+                           FontSize="12"/>
+            </RelativePanel>
             <StackPanel Orientation="Horizontal"
                         x:Name="MediaControlsStackPanel"
                         RelativePanel.AlignRightWithPanel="True"
