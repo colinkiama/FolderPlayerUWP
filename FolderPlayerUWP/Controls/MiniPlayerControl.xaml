@@ -97,7 +97,8 @@
                 <Button x:Name="ExpandButton"
                        Style="{StaticResource MiniPlayerExpandButtonStyle}"
                         Content="&#xE70E;"
-                        Margin="12,0,0,0"/>
+                        Margin="12,0,0,0"
+                        Click="ExpandButton_Click"/>
             </StackPanel>
             
             

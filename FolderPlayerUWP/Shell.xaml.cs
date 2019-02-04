@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +26,12 @@ namespace FolderPlayerUWP
         public Shell()
         {
             this.InitializeComponent();
+        }
+
+        public void MiniPlayer_ExpandButtonClicked(object sender, RoutedEventArgs args)
+        {
+            Debug.WriteLine("yessir!");
+
         }
     }
 }

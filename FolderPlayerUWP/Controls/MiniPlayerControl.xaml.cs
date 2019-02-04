@@ -23,5 +23,9 @@ namespace FolderPlayerUWP.Controls
         {
             this.InitializeComponent();
         }
+
+        public event RoutedEventHandler ExpandButtonClicked;
+
+        private void ExpandButton_Click(object sender, RoutedEventArgs e) => ExpandButtonClicked?.Invoke(this, e);
     }
 }
