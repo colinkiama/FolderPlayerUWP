@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FolderPlayerUWP.Views;
+using Microsoft.Toolkit.Uwp.UI.Animations;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -26,12 +28,19 @@ namespace FolderPlayerUWP
         public Shell()
         {
             this.InitializeComponent();
+            
+            
         }
 
-        public void MiniPlayer_ExpandButtonClicked(object sender, RoutedEventArgs args)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            Debug.WriteLine("yessir!");
+           base.OnNavigatedTo(e);
+           await NowPlayingViewObject.Offset(0, (float)(Window.Current.Bounds.Height), 0).StartAsync();
+        }
 
+        private async void MiniPlayer_ExpandButtonClicked(object sender, RoutedEventArgs e)
+        {
+            await NowPlayingViewObject.Offset(0).StartAsync();
         }
     }
 }

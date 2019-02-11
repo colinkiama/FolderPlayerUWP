@@ -41,6 +41,9 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
+        
+       
+        
         <Grid Name="InnerGrid">
             <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -69,5 +72,9 @@
               Height="60"
               ExpandButtonClicked="MiniPlayer_ExpandButtonClicked"/>
         </Grid>
+
+        <Views:NowPlayingView x:Name="NowPlayingViewObject"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Stretch"/>
     </Grid>
 </Page>

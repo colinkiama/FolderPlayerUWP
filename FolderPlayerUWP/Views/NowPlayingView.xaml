@@ -10,5 +10,6 @@
 
     <Grid>
 
+        <TextBlock Name="TitleTextBlock"/>
     </Grid>
 </Page>

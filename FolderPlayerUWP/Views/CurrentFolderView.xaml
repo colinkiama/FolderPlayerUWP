@@ -25,6 +25,8 @@
                                 Value="{StaticResource FolderNameStyle}"/>
                         <Setter Target="MediaListView.Margin"
                                 Value="0,20,0,0"/>
+                        <Setter Target="ChooseFolderButton.VerticalAlignment"
+                                Value="Bottom"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Desktop">
@@ -36,29 +38,26 @@
                                 Value="{StaticResource DesktopFolderNameStyle}"/>
                         <Setter Target="MediaListView.Margin"
                                 Value="0,28,0,0"/>
+                        <Setter Target="ChooseFolderButton.VerticalAlignment"
+                                Value="Top"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        <controls:DropShadowPanel
-            VerticalAlignment="Bottom"
-                HorizontalAlignment="Right"
+
+
+        <Button Style="{ThemeResource RoundedAccentButtonStyle}"
+            Name="ChooseFolderButton"
+                    HorizontalAlignment="Right"
                 Margin="0,0,0,40"
-            BlurRadius="12"
-            ShadowOpacity="0.5"
-            OffsetY="2"
             Grid.RowSpan="2"
             Canvas.ZIndex="12">
-            <Button Style="{ThemeResource AccentButtonStyle}"
-            Name="ChooseFolderButton"
-                    >
-                <Button.Content>
-                    <StackPanel>
-                        <TextBlock Text="Choose Folder"/>
-                    </StackPanel>
-                </Button.Content>
-            </Button>
-        </controls:DropShadowPanel>
+            <Button.Content>
+                <StackPanel>
+                    <TextBlock Text="Choose Folder"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
 
         <TextBlock Text="1999"
                Style="{StaticResource FolderNameStyle}"
