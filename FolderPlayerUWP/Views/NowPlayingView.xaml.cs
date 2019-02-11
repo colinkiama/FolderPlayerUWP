@@ -32,7 +32,7 @@ namespace FolderPlayerUWP.Views
     public sealed partial class NowPlayingView : Page
     {
 
-
+        public double PositiveInfinity { get { return double.PositiveInfinity; } }
 
         public Windows.UI.Color albumGlowColor
         {

@@ -12,7 +12,6 @@
         HorizontalContentAlignment="Stretch"
         VerticalContentAlignment="Stretch"
         ShadowOpacity="0.4"
-        OffsetY="-4"
         BlurRadius="20"
         Padding="10,12">
         <VisualStateManager.VisualStateGroups>

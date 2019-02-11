@@ -22,6 +22,10 @@
                                 Value="{StaticResource ViewTitleStyle}"/>
                         <Setter Target="AlbumImageShadowPanel.VerticalAlignment"
                                 Value="Top"/>
+                        <Setter Target="AlbumImage.Height"
+                                Value="auto"/>
+                        <Setter Target="AlbumImage.Width"
+                                Value="auto"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Desktop">
@@ -35,7 +39,11 @@
                                 Value="{StaticResource DesktopViewTitleStyle}"/>
                         <Setter Target="AlbumImageShadowPanel.VerticalAlignment"
                                 Value="Center"/>
-                        
+                        <Setter Target="AlbumImage.Width"
+                                Value="300"/>
+                        <Setter Target="AlbumImage.Height"
+                                Value="300"/>
+
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -70,7 +78,7 @@
         <controls:DropShadowPanel
             Color="{x:Bind albumGlowColor, Mode=OneWay}"
             Margin="20,40,20,0"
-            BlurRadius="80"
+            BlurRadius="40"
             Name="AlbumImageShadowPanel"
             Grid.Row="1"
             HorizontalContentAlignment="Stretch"
@@ -78,11 +86,8 @@
             
             HorizontalAlignment="Center"
             >
-            <Image Source="ms-appx:///Assets/268x0w.jpg"
-               x:Name="AlbumImage"
-               MaxWidth="300"
-                   MaxHeight="300"
-                       />
+            <Image Source="ms-appx:///Assets/220px-1999_Joey_Badass.jpg"
+               Name="AlbumImage"/>
         </controls:DropShadowPanel>
         <!--Create UserControl for FullMediaControls-->
     </Grid>
