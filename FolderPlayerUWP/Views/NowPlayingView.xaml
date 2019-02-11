@@ -20,7 +20,7 @@
                                 Value="{StaticResource RegularViewMargin}"/>
                         <Setter Target="ViewTitleTextBlock.Style"
                                 Value="{StaticResource ViewTitleStyle}"/>
-                        <Setter Target="ArtistImageShadowPanel.VerticalAlignment"
+                        <Setter Target="AlbumImageShadowPanel.VerticalAlignment"
                                 Value="Top"/>
                     </VisualState.Setters>
                 </VisualState>
@@ -33,7 +33,7 @@
                                 Value="{StaticResource DesktopViewMargin}"/>
                         <Setter Target="ViewTitleTextBlock.Style"
                                 Value="{StaticResource DesktopViewTitleStyle}"/>
-                        <Setter Target="ArtistImageShadowPanel.VerticalAlignment"
+                        <Setter Target="AlbumImageShadowPanel.VerticalAlignment"
                                 Value="Center"/>
                         
                     </VisualState.Setters>
@@ -43,8 +43,8 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <Grid Name="TitleGrid">
@@ -70,20 +70,19 @@
         <controls:DropShadowPanel
             Color="{x:Bind albumGlowColor, Mode=OneWay}"
             Margin="20,40,20,0"
-            BlurRadius="60"
-            Name="ArtistImageShadowPanel"
+            BlurRadius="80"
+            Name="AlbumImageShadowPanel"
             Grid.Row="1"
             HorizontalContentAlignment="Stretch"
             VerticalContentAlignment="Stretch"
-            VerticalAlignment="Center"
+            
             HorizontalAlignment="Center"
             >
-            <Border>
-                <Image Source="ms-appx:///Assets/220px-1999_Joey_Badass.jpg"
-               Name="ArtistImage"
+            <Image Source="ms-appx:///Assets/268x0w.jpg"
+               x:Name="AlbumImage"
                MaxWidth="300"
-               MaxHeight="300"/>
-            </Border>
+                   MaxHeight="300"
+                       />
         </controls:DropShadowPanel>
         <!--Create UserControl for FullMediaControls-->
     </Grid>

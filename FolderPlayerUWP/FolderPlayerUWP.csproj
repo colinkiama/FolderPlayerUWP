@@ -128,7 +128,8 @@
     <Compile Include="Controls\SettingsMenuItem.xaml.cs">
       <DependentUpon>SettingsMenuItem.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\DeviceFamilyChecker.cs" />
+    <Compile Include="Helpers\ImageColorHelper.cs" />
+    <Compile Include="Helpers\DeviceFamilyHelper.cs" />
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
@@ -151,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\220px-1999_Joey_Badass.jpg" />
+    <Content Include="Assets\268x0w.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

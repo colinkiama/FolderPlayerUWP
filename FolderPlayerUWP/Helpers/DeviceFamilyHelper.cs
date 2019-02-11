@@ -7,7 +7,7 @@ using Windows.System.Profile;
 
 namespace FolderPlayerUWP.Helpers
 {
-    public static class DeviceFamilyChecker
+    public static class DeviceFamilyHelper
     {
         public static bool checkIfMoblie()
         {
