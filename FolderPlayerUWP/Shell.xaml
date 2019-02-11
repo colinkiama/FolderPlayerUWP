@@ -41,9 +41,6 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        
-       
-        
         <Grid Name="InnerGrid">
             <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>

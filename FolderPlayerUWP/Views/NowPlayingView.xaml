@@ -5,11 +5,76 @@
     xmlns:local="using:FolderPlayerUWP.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
-    <Grid>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowSizes">
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="TitleGrid.Margin"
+                                Value="{StaticResource RegularViewMargin}"/>
+                        <Setter Target="ViewTitleTextBlock.Style"
+                                Value="{StaticResource ViewTitleStyle}"/>
+                        <Setter Target="ArtistImage.VerticalAlignment"
+                                Value="Top"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="TitleGrid.Margin"
+                                Value="{StaticResource DesktopViewMargin}"/>
+                        <Setter Target="ViewTitleTextBlock.Style"
+                                Value="{StaticResource DesktopViewTitleStyle}"/>
+                        <Setter Target="ArtistImage.VerticalAlignment"
+                                Value="Center"/>
+                        <Setter Target="ArtistImage.Margin"
+                                Value="20,0"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
-        <TextBlock Name="TitleTextBlock"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Name="TitleGrid">
+        <StackPanel Name="TitleStackPanel"
+                    Orientation="Horizontal">
+            <TextBlock Text="Now Playing"
+                       Name="ViewTitleTextBlock"/>
+        </StackPanel>
+      
+        <Button FontFamily="Segoe MDL2 Assets"
+                Content="&#xE711;"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Background="Transparent"
+                Style="{StaticResource TextBlockButtonStyle}"
+                Foreground="{ThemeResource DefaultTextForegroundThemeBrush}"
+                Margin="0,0,20,0"
+                FontSize="24"
+                Name="CloseButton"
+                Visibility="{x:Bind isNotMobile}"
+                Click="CloseButton_Click"/>
+        </Grid>
+        <Image Source="ms-appx:///Assets/220px-1999_Joey_Badass.jpg"
+               Grid.Row="1"
+               Name="ArtistImage"
+               Margin="20,40,20,0"
+               MaxWidth="300"
+               MaxHeight="300"
+               />
+
+        <!--Create UserControl for FullMediaControls-->
     </Grid>
 </Page>

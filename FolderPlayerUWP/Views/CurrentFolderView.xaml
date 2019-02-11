@@ -27,6 +27,8 @@
                                 Value="0,20,0,0"/>
                         <Setter Target="ChooseFolderButton.VerticalAlignment"
                                 Value="Bottom"/>
+                        <Setter Target="ChooseFolderButton.FontSize"
+                                Value="12"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Desktop">
@@ -40,6 +42,8 @@
                                 Value="0,28,0,0"/>
                         <Setter Target="ChooseFolderButton.VerticalAlignment"
                                 Value="Top"/>
+                        <Setter Target="ChooseFolderButton.FontSize"
+                                Value="15"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -53,7 +57,11 @@
             Grid.RowSpan="2"
             Canvas.ZIndex="12">
             <Button.Content>
-                <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE838;"
+                              Margin="0,0,8,0"
+                               VerticalAlignment="Center"
+                               FontSize="16"/>
                     <TextBlock Text="Choose Folder"/>
                 </StackPanel>
             </Button.Content>

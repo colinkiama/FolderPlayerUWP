@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -35,12 +36,19 @@ namespace FolderPlayerUWP
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
            base.OnNavigatedTo(e);
-           await NowPlayingViewObject.Offset(0, (float)(Window.Current.Bounds.Height), 0).StartAsync();
+            await NowPlayingViewDown();
         }
 
         private async void MiniPlayer_ExpandButtonClicked(object sender, RoutedEventArgs e)
         {
+            await NowPlayingViewDown();
             await NowPlayingViewObject.Offset(0).StartAsync();
+        }
+
+        private async Task NowPlayingViewDown()
+        {
+            NowPlayingViewObject.Visibility = Visibility.Visible;
+            await NowPlayingViewObject.Offset(0, (float)(Window.Current.Bounds.Height), 0).StartAsync();
         }
     }
 }
