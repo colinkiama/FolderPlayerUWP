@@ -5,6 +5,7 @@
     xmlns:local="using:FolderPlayerUWP.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -19,7 +20,7 @@
                                 Value="{StaticResource RegularViewMargin}"/>
                         <Setter Target="ViewTitleTextBlock.Style"
                                 Value="{StaticResource ViewTitleStyle}"/>
-                        <Setter Target="ArtistImage.VerticalAlignment"
+                        <Setter Target="ArtistImageShadowPanel.VerticalAlignment"
                                 Value="Top"/>
                     </VisualState.Setters>
                 </VisualState>
@@ -32,7 +33,7 @@
                                 Value="{StaticResource DesktopViewMargin}"/>
                         <Setter Target="ViewTitleTextBlock.Style"
                                 Value="{StaticResource DesktopViewTitleStyle}"/>
-                        <Setter Target="ArtistImage.VerticalAlignment"
+                        <Setter Target="ArtistImageShadowPanel.VerticalAlignment"
                                 Value="Center"/>
                         
                     </VisualState.Setters>
@@ -66,14 +67,24 @@
                 Visibility="{x:Bind isNotMobile}"
                 Click="CloseButton_Click"/>
         </Grid>
-        <Image Source="ms-appx:///Assets/220px-1999_Joey_Badass.jpg"
-               Grid.Row="1"
+        <controls:DropShadowPanel
+            Color="{x:Bind albumGlowColor, Mode=OneWay}"
+            Margin="20,40,20,0"
+            BlurRadius="60"
+            Name="ArtistImageShadowPanel"
+            Grid.Row="1"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            >
+            <Border>
+                <Image Source="ms-appx:///Assets/220px-1999_Joey_Badass.jpg"
                Name="ArtistImage"
-               Margin="20,40,20,0"
                MaxWidth="300"
-               MaxHeight="300"
-               />
-
+               MaxHeight="300"/>
+            </Border>
+        </controls:DropShadowPanel>
         <!--Create UserControl for FullMediaControls-->
     </Grid>
 </Page>
