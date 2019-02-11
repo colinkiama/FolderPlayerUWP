@@ -34,8 +34,7 @@
                                 Value="{StaticResource DesktopViewTitleStyle}"/>
                         <Setter Target="ArtistImage.VerticalAlignment"
                                 Value="Center"/>
-                        <Setter Target="ArtistImage.Margin"
-                                Value="20,0"/>
+                        
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -43,8 +42,8 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <Grid Name="TitleGrid">

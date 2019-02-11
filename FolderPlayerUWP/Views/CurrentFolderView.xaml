@@ -44,53 +44,64 @@
                                 Value="Top"/>
                         <Setter Target="ChooseFolderButton.FontSize"
                                 Value="15"/>
+                        <Setter Target="ChooseFolderButton.HorizontalAlignment"
+                                Value="Right"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
 
-        <Button Style="{ThemeResource RoundedAccentButtonStyle}"
-            Name="ChooseFolderButton"
-                    HorizontalAlignment="Right"
-                Margin="0,0,0,40"
-            Grid.RowSpan="2"
-            Canvas.ZIndex="12">
-            <Button.Content>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE838;"
-                              Margin="0,0,8,0"
-                               VerticalAlignment="Center"
-                               FontSize="16"/>
-                    <TextBlock Text="Choose Folder"/>
-                </StackPanel>
-            </Button.Content>
-        </Button>
+        
 
+        <RelativePanel VerticalAlignment="Bottom">
         <TextBlock Text="1999"
                Style="{StaticResource FolderNameStyle}"
                    x:Name="PageTitle"/>
-        <ListView Grid.Row="1"
+            
+            <Button Style="{ThemeResource RoundedAccentButtonStyle}"
+            Name="ChooseFolderButton"
+            Canvas.ZIndex="12"
+                    RelativePanel.AlignRightWithPanel="True">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE838;"
+                              Margin="0,0,8,0"
+                               VerticalAlignment="Center"
+                               FontSize="16"/>
+                        <TextBlock Text="Choose Folder"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+
+            <ListView
                   ItemContainerStyle="{ThemeResource NoPaddingAccentSelectionListViewItemStyle}"
                   x:Name="MediaListView"
                   SelectionMode="Single"
-                  IsItemClickEnabled="True">
-            <ListViewItem>
-                <controls1:MediaControl/>
-            </ListViewItem>
-            <ListViewItem>
-                <controls1:MediaControl/>
-            </ListViewItem>
-            <ListViewItem>
-                <controls1:MediaControl/>
-            </ListViewItem>
-            <ListViewItem>
-                <controls1:MediaControl/>
-            </ListViewItem>
-            <ListViewItem>
-                <controls1:MediaControl/>
-            </ListViewItem>
-        </ListView>
+                  IsItemClickEnabled="True"
+                  Margin="0,12,0,0"
+                  RelativePanel.AlignLeftWithPanel="True"
+                  RelativePanel.AlignRightWithPanel="True"
+                  RelativePanel.Below="ChooseFolderButton"
+                  RelativePanel.AlignBottomWithPanel="True">
+                <ListViewItem>
+                    <controls1:MediaControl/>
+                </ListViewItem>
+                <ListViewItem>
+                    <controls1:MediaControl/>
+                </ListViewItem>
+                <ListViewItem>
+                    <controls1:MediaControl/>
+                </ListViewItem>
+                <ListViewItem>
+                    <controls1:MediaControl/>
+                </ListViewItem>
+                <ListViewItem>
+                    <controls1:MediaControl/>
+                </ListViewItem>
+            </ListView>
 
+        </RelativePanel>
     </Grid>
 </Page>

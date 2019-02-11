@@ -9,6 +9,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -29,8 +30,12 @@ namespace FolderPlayerUWP
         public Shell()
         {
             this.InitializeComponent();
-            
-            
+            SystemNavigationManager.GetForCurrentView().BackRequested += Shell_BackRequested;
+        }
+
+        private void Shell_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            e.Handled = true;
         }
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
@@ -42,12 +47,19 @@ namespace FolderPlayerUWP
         private async void MiniPlayer_ExpandButtonClicked(object sender, RoutedEventArgs e)
         {
             await NowPlayingViewDown();
+            await NowPlayingViewUp();
+            
+        }
+
+        private async Task NowPlayingViewUp()
+        {
+            NowPlayingViewObject.Visibility = Visibility.Visible;
             await NowPlayingViewObject.Offset(0).StartAsync();
         }
 
         private async Task NowPlayingViewDown()
         {
-            NowPlayingViewObject.Visibility = Visibility.Visible;
+            NowPlayingViewObject.Visibility = Visibility.Collapsed;
             await NowPlayingViewObject.Offset(0, (float)(Window.Current.Bounds.Height), 0).StartAsync();
         }
     }

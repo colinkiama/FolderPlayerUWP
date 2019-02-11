@@ -38,6 +38,7 @@ namespace FolderPlayerUWP.Views
         private async void NowPlayingView_BackRequested(object sender, BackRequestedEventArgs e)
         {
             await HideView();
+            e.Handled = true;
         }
 
         private async Task HideView()
